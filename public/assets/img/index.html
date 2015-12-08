@@ -1,0 +1,125 @@
+<?PHP
+set_include_path($_SERVER['DOCUMENT_ROOT'] . '/resources/templates/');
+$pageTitle = "PBI Home";
+$pageStyle = "/resources/css/main.css";
+include "dochead.inc";
+include "header.inc";
+?>
+
+<style type="text/css">
+/* thumbnail rollover */
+.thumb { display:block; text-decoration:none; background:transparent; margin:5px 3px; padding:3px; border:1px solid #FFFFFF; }
+
+.thumb:hover { text-decoration:none; background-color:#FFFFD0; }
+
+.thumb b { display:block; visibility:hidden; position:absolute; top:128px; left:150px; padding:10px; opacity:0; z-index:-10;
+-o-box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+-icab-box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+-khtml-box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+-moz-box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+-webkit-box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+
+-o-border-radius: 8px;
+-icab-border-radius: 8px;
+-khtml-border-radius: 8px;
+-moz-border-radius: 8px;
+-webkit-border-radius: 8px;
+border-radius: 8px;
+
+-webkit-transition: opacity 0.6s ease-in-out;
+}
+
+.thumb b img	{ display:block; width:300px; height:200px; }
+
+.thumb:hover b { visibility:visible; z-index:50; padding:10px; border:1px solid #aaa; background:#fff; opacity:1.0; }
+/* end thumbnails */
+</style>
+
+<body>
+<div id="wrapper">
+	<?php include "";?>
+
+	<!-- START main content of page -->
+	<div id="content">
+		<div id="bannerText" style="visibility:hidden;">Prisoners Bible Institute</div>
+		
+		<h4 style="text-align:center;color:#EEEEEE;font-variant:normal;margin:0px auto 10px;">
+			Prison ministry since 1978, where <i>"The CROSS is the KEY!"</i>
+		</h4>
+		<hr style="display:block;width:574px;padding:0px;margin:6px auto 10px;border:0px none;border-top:1px solid #AAA;border-bottom:1px solid #FFF;font-size:1px;line-height:0px;" />
+
+		<!-- left-hand content -->
+		<div style="float:left;padding:0px;margin:0px 20px;border:1px none yellow;">
+			<div class="thumb">
+				<img src="pics/thumbs/thumb_male_prisoner.jpg" style="display:block;width:100px;height:70px;" alt="" />
+				<b><img class="large" src="pics/thumbs/thumb_male_prisoner.jpg" alt="" /></b>
+			</div>
+			<div class="thumb">
+				<img src="pics/thumbs/thumb_darrington_chapel.jpg" style="display:block;width:100px;height:70px;" alt="" />
+				<b><img class="large" src="pics/thumbs/thumb_darrington_chapel.jpg" alt="" /></b>
+			</div>
+			<div class="thumb">
+				<img src="pics/thumbs/thumb_female_prisoner.jpg" style="display:block;width:100px;height:70px;" alt="" />
+				<b><img class="large" src="pics/thumbs/thumb_female_prisoner.jpg" alt="" /></b>
+			</div>
+		</div>
+
+		<!-- right-hand content -->
+		<div style="display:block;padding:3px;margin:0px 20px;border:1px none red;text-align:center;">
+			<h2 style="text-align:left;">Our mission</h2>
+			<h4 style="text-align:left;">"Remember the prisoners as if chained with them..."<br>Heb 13:3a</h4>
+			<p class="default" style="text-indent:0.0em;">
+			P.B.I. involves Christian men and women in sharing the love of Jesus with those behind bars. We minister to men and women without hope, locked behind prison walls and in desperate need of the Savior, Jesus Christ. P.B.I. volunteers hold weekend prison revivals in the Texas Department of Criminal Justice system, visiting prisons throughout the state of Texas. These three-day weekend revivals are held every other month, on average, while visitation and discipleship opportunities are available each month.  We also provide study Bibles, Bible correspondence courses and indigent supplies for the inmates.
+			</p>
+			<hr style="display:block;padding:0px;margin:6px auto;border:0px none;border-top:1px solid #AAA;border-bottom:1px solid #FFF;font-size:1px;line-height:0px;" />
+			<h2>You were created with a purpose!</h2>
+			<h4>Is your life empty and without purpose?</h4>
+			<p class="default">
+			Every person - past, present, future, living or dead - was created for a purpose. The lump of clay doesn't know what it will become, but the potter knows before the clay is ever taken out of the ground. The clay is molded and shaped into a worthy and beautiful vessel that serves many useful purposes. You are like that lump of clay at birth, without direction or purpose, but God has a purpose for you that He envisioned before the foundation of the world. 
+			</p>
+			<p class="default">
+			Throughout your life you may have been told that you were worthless and would never amount to anything. Those are simply the words of men, some without a purpose also. The <b>TRUTH</b> is that you are of great value to The One who created you, because He loves you. You exist today simply because He formed you in your mother's womb. If the creator of all the heavens and earth says that you are worthy and have a purpose, then the words of ordinary men become meaningless. Find out why God created you, and what your reason for existence is. Ask God to show you the way through His son Jesus Christ, and hang on for the wonderful journey that awaits you!
+			</p>
+		</div>
+
+		<!-- clear the floats -->
+		<div style="clear:both;overflow:none;"></div>
+	</div>
+	<!-- END content -->
+
+
+	<!-- absolute elements -->
+	<div id="navmenu">
+		<script src="/resources/scripts/menu.js"></script>
+	</div>
+
+	<div id="contentleft">
+		<div style="text-align:left;">
+			". . . to proclaim liberty to the captives, and the opening of the prison to those who are bound . . ."
+		</div>
+		<div style="text-align:right;">Isa. 61:1b</div>
+	</div>
+
+	<div id="contentright">
+		<div style="text-align:left;">
+			". . . to proclaim liberty to the captives, and the opening of the prison to those who are bound . . ."
+		</div>
+		<div style="text-align:right;">Isa. 61:1b</div>
+	</div>
+
+	<div id="footer">
+		<script src="/resources/scripts/copyright.js"></script>
+	</div>
+	<!-- END absolute elements -->
+
+</div>
+<!-- END wrapper -->
+
+
+<!-- SETUP background -->
+<div id="back-ground-img">
+	<img width="100%" height="100%" src="pics/backgrounds/blue-rays-bg.jpg" />
+</div>
+<!-- END background -->
+</body></html>
