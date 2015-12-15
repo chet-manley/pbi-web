@@ -1,12 +1,15 @@
 /* default fonts */
+body {
+	color: #FFFFFF;
+	font: normal normal 400 1.0em/1.2em Roboto,sans-serif;
+}
 p {
-	font-family: Ubuntu,Arial,sans-serif;
 	margin: 1em 0;
 	text-align: justify;
 	text-indent: 1.5em;
 }
 h1, h2, h3, h4 {
-	font-family: Play,sans-serif;
+	font-family: Roboto,sans-serif;
 	font-weight: 700;
 }
 h1 {font-size: 150%;}
@@ -14,10 +17,17 @@ h2 {font-size: 140%;}
 h3 {font-size: 130%;}
 h4 {font-size: 120%;}
 .bold {font-weight: 700;}
-.center {text-align: center;}
+.center-align {text-align: center;}
 .capitalize {text-transform: capitalize;}
+.copytext {color: #DDDDDD;}
+.dark {color: #000000;}
+.fout-hide {visibility: hidden;}
+.large-font {font-size: 62px;}
+.no-indent {text-indent: 0;}
+.percentage::after {content: '%';}
+.print-only {display: none}
+.right-align {text-align: right;}
 .small-caps {font-variant: small-caps;}
-.percentage::after {content:'%';}
 
 /*
 a:link		{ color:#CCFFFF; text-decoration:none; }
@@ -27,11 +37,20 @@ a:hover		{ color:#66CCFF; text-decoration:none; }
 .disabled a:hover, .disabled a:active	{ text-decoration:line-through; cursor:default; }
 */
 
+hr {
+	display: block;
+	width: 80%;
+	padding: 0;
+	margin: 6px auto;
+	border: 0 none;
+	border-top: 1px solid #AAAAAA;
+	border-bottom: 1px solid #FFFFFF;
+	font-size: 1px;
+	line-height: 0;
+}
+
 /* background */
 #back-ground-img  { z-index:0; visibility:visible; position:fixed; left: -7.5%; top: -15%; width:115%; height:115%; display:block; } 
-
-/* prevent FOUT */
-.foutHide	{ visibility:hidden; }
 
 /* SETUP the page layout */
 #wrapper	{ z-index:1; visibility:visible; margin:0; padding:0; border:0 none; position:absolute; left:0; top:0; width:100%; height:auto !important; height:100%; min-height:100%; }
@@ -80,51 +99,41 @@ border-radius:8px;
 .greenLink:hover, .greenLink:active	{ color:#9CFF38; }
 /* end layout SETUP */
 
-
-
-
-
-/* DEFAULT FONT SIZE */
-.default		{ color: #FFFFFF; font: normal normal 400 1.0em/1.2em Arial,Verdana,sans-serif;  }
-
-.defaultDark	{ font: normal normal 400 1.0em/1.2em Arial,Verdana,sans-serif;  }
-
-.title, h1		{ color: #FFFFFF; font: normal small-caps 400 2.0em/1.3em Verdana, Arial, Tahoma, sans-serif; padding:0 0 4px; margin:0; }
-
-h2				{ color: #FFFFFF; font: normal small-caps 700 1.4em/1.3em Verdana, Arial, Tahoma, sans-serif; padding:0; margin:0; }
-
-h3				{ color: #E0E0E0; font: normal normal 700 1.2em/1.1em Verdana, Arial, Tahoma, sans-serif; padding:0; margin:0; }
-
-h4				{ color: #DDDDDD; font: normal small-caps 700 0.9em/1.3em Verdana, Arial, Tahoma, sans-serif; padding:0; margin:0; }
-
-.copytext		{ color: #DDDDDD; font: normal normal 700 12px/13px Arial,Verdana,sans-serif; }
-
-a.copytext:hover{ color: #000000; font: normal normal 400 12px/13px Arial,Verdana,sans-serif; }
-
-.list			{ color: #FFFFFF; font: normal normal 400 16px Arial,Verdana,sans-serif; }
-.noIndent		{ text-indent:0; }
-.addIndent		{ padding-left:1.5em; }
-.largeFont		{ font-size: 62px; }
-hr {
+/* thumbnail rollover */
+.thumb {
 	display: block;
-	width: 80%;
-	padding: 0;
-	margin: 6px auto;
-	border: 0 none;
-	border-top: 1px solid #AAA;
-	border-bottom: 1px solid #FFF;
-	font-size: 1px;
-	line-height: 0;
+	text-decoration: none;
+	background: transparent;
+	margin: 5px 3px;
+	padding: 3px;
+	border: 1px solid #FFFFFF;
 }
-
-
-/* SETUP PAGES FOR PRINTING */
-@media print {
-.printHide 	{ display:none; }
-#navmenu	{ display:none; }
-.printHelp	{ width:600px; }
-TABLE 		{ COLOR: #000000; FONT: 13px arial, sans-serif; font-weight: normal; }
+.thumb:hover {
+	text-decoration: none;
+	background-color: #FFFFD0;
 }
-@media screen{
-.printonly { display:none }
+.thumb b {
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	top: 128px;
+	left: 150px;
+	padding: 10px;
+	opacity: 0;
+	box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+	border-radius: 8px;
+	padding: 10px;
+	border: 1px solid #aaa;
+	background: #fff;
+	transition: opacity 0.6s ease-in-out;
 }
+.thumb b img {
+	display: block;
+	width: 300px;
+	height: 200px;
+}
+.thumb:hover b {
+	visibility: visible;
+	opacity: 1.0;
+}
+/* end thumbnails */
