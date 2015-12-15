@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="http://pbiministries.org/assets/img/icons/mstile-70x70.png?v=KmmKNJ4BNb"/>
+      <square150x150logo src="http://pbiministries.org/assets/img/icons/mstile-150x150.png?v=KmmKNJ4BNb"/>
+      <square310x310logo src="http://pbiministries.org/assets/img/icons/mstile-310x310.png?v=KmmKNJ4BNb"/>
+      <wide310x150logo src="http://pbiministries.org/assets/img/icons/mstile-310x150.png?v=KmmKNJ4BNb"/>
+      <TileColor>#5545ee</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>
