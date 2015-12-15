@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'MichromaRegular';
+	src: url('../fonts/michroma-webfont.eot'); /* IE9 compatibility modes */
+	src: url('../fonts/michroma-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+	     url('../fonts/michroma-webfont.woff') format('woff'), /* All other modern browsers */
+	     url('../fonts/michroma-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+	     url('../fonts/michroma-webfont.svg#MichromaRegular') format('svg'); /* Legacy iOS */
+	}
+
+
+@font-face {
+    font-family: 'Lobster1.4Regular';
+	src: url('../fonts/lobster-webfont.eot');
+    src: url('../fonts/lobster-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lobster-webfont.woff') format('woff'),
+         url('../fonts/lobster-webfont.ttf') format('truetype'),
+         url('../fonts/lobster-webfont.svg#Lobster1.4Regular') format('svg');
+}
