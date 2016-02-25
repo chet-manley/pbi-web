@@ -1,13 +1,17 @@
 {
-    "env": {
-    "amd": false,
+	"env": {
+		"amd": false,
 		"browser": true,
 		"es6": false,
 		"node": false
-    },
-	
+	},
+
 	"ecmaFeatures": {
-		"modules": true
+		"modules": false
+	},
+
+	"globals": {
+		"angular": true
 	},
 
     "rules": {
@@ -111,7 +115,7 @@
         "comma-style": 1,
         "complexity": [0, 5],
         "consistent-return": 2,
-        "consistent-this": [1, "self"],
+        "consistent-this": [1, "ctrl"],
         "curly": [2, "all"],
         "default-case": 1,
 		"dot-location": [2, "property"],
@@ -137,7 +141,7 @@
         "operator-assignment": [0, "always"],
         "padded-blocks": 0,
         "quote-props": 0,
-        "quotes": [2, "single", "avoid-escape"],
+        "quotes": [1, "single", "avoid-escape"],
         "radix": 0,
         "semi": 2,
         "semi-spacing": [2, {"before": false, "after": true}],
