@@ -1,5 +1,27 @@
+/* background */
+html {
+	background-attachment: fixed;
+	background-image: url('/assets/img/bg/blue-rays-bg.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/*
+body::before {
+	content: '';
+	background-image: url('/assets/img/bg/blue-rays-bg.jpg');
+	background-size: cover;
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	will-change: transform;
+	z-index: -1;
+}
+*/
+
 /* default text */
 body {
+	background-color: transparent;
 	color: #FFFFFF;
 	font: normal normal 400 1.0em/1.2em Roboto,sans-serif;
 	position: absolute;
@@ -24,7 +46,13 @@ h4 {font-size: 120%;}
 .dark {color: #000000;}
 .fout-hide {visibility: hidden;}
 .large-font {font-size: 62px;}
+.left-align {text-align: left;}
 .no-indent {text-indent: 0;}
+.no-wrap {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
 .print-only {display: none}
 .right-align {text-align: right;}
 .small-caps {font-variant: small-caps;}
@@ -49,94 +77,55 @@ hr {
 	width: 80%;
 }
 
-/* background */
-body > .background-img {
-	height: 115%;
-	left: -7.5%;
-	position: fixed;
-	top: -15%;
-	width: 115%;
-	z-index: 0;
-}
-
 /* navigation menu */
-nav {
-	background: rgb(50,50,50);
-	background: rgba(50,50,50,0.5);
-	border-bottom-right-radius: 10px;
-	box-shadow: 0 0 8px 2px rgba(75,75,75,0.8);
+body > menu {
 	left: 0;
-	padding: 15px 0;
+	margin: 0;
+	max-width: 225px;
+	padding: 0;
 	position: fixed;
 	top: 0;
 	z-Index: 5;
 }
-nav ul {
-	list-style: none;
+nav {
+	background: rgb(50,50,50);
+	background: rgba(50,50,50,0.5);
+	border-radius: 0 0 10px 0;
+	box-shadow: 0 0 8px 2px rgba(75,75,75,0.8);
+	padding: 15px 0;
 }
-nav li a {
-	color: #3333AA;
-	display: block;
+nav a {
+	color: #0099FF;
 	font-family: Michroma,sans-serif;
 	padding: 5px 20px;
 	text-decoration: none;
 	transition: color 500ms ease-out, text-shadow 500ms ease-out;
-	white-space: nowrap;
 }
-nav li a:hover {
+nav a.red {color: #FF7575;}
+nav a.green {color: #BAFF75;}
+nav a:hover,
+nav a:active {
 	background: rgb(25,25,25);
 	background: rgba(50,50,50,0.8);
 	color: #FFFFFF;
-	text-shadow: 0 0 3px rgba(50,50,50,0.8);
 }
-li .red {color: #FF7575;}
-li .red:hover,
-li .red:active {color: #FF3838;}
-li .green {color: #BAFF75;}
-li .greenLink:hover,
-li .greenLink:active {color: #9CFF38;}
-
-
-header {
-	background: transparent;
-	margin: 0 auto;
-	position: relative;
-	width: 620px;
-	z-index: 4;
+/* "floating" verse directive */
+pbi-floating-verse {
+	background: rgb(250,250,255);
+	border-radius: 0 10px 10px 0;
+	box-shadow: 0 0 8px 2px rgba(75,75,75,0.8);
+	color: #000000;
+	padding: 10px;
+	text-shadow: 0 0 2px rgba(150,150,150,0.8);
 }
 
-main {
-	background: transparent;
-	border: 0 none red;
-	margin: 15px auto;
-	margin-bottom: 51px;
-	padding: 1px 0;
-	position: relative;
-	width: 620px;
-	z-index: 3;
-}
-
-footer {
+pbi-footer {
 	background: #DF781C;
 	bottom: 0;
 	left: 50%;
 	position: absolute;
 	width: 0;
 	z-index: 3;
-}
-
-.floating-verse {
-	background: rgb(250,250,250);
-	background: rgba(250,250,250,0.9);
-	border: 2px ridge #707070;
-	border-radius: 10px;
-	color: #000000;
-	left: 5vw;
-	padding: 10px;
-	position: fixed;
-	top: 50%;
-	width: 250px;
-	z-index: 2;
 }
 
 #headerContainer	{ height:100px; background:transparent url('../pics/trans-header-bg.png') repeat-x 0 0; border:1px solid #C0C0C0; border-top:0 none; -moz-border-radius:0 0 8px 8px; -webkit-border-radius:0 0 8px 8px; border-radius:0 0 8px 8px; }
