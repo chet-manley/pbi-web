@@ -12,5 +12,5 @@
 	Controller.$inject = [];
 	/* add controller */
 	angular.module('pbiWeb')
-		.controller('calendar', Controller);
+		.controller('aboutUs', Controller);
 }(angular));

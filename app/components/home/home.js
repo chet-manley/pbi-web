@@ -1,19 +1,17 @@
-(function (angular, undefined) {
+(function (angular) {
 	'use strict';
 	/* create controller */
-	function HomeController($routeParams) {
+	function Controller($routeParams) {
 		var ctrl = this,
 			init = function init() {
-				// assign properties and methods to controller //
-				
-				// public methods
-				
+				/* assign properties and methods to controller */
 			};
 		// this controller auto-inits
 		init();
 		console.log('HomeController', ctrl);
 	}
+	Controller.$inject = ['$routeParams'];
 	/* add controller */
 	angular.module('pbiWeb')
-		.controller('home', ['$routeParams', HomeController]);
+		.controller('home', Controller);
 }(angular));
