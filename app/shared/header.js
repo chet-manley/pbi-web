@@ -1,4 +1,4 @@
-(function (angular, undefined) {
+(function (angular) {
 	'use strict';
 	/* create directive */
 	function pbiHeader() {
@@ -6,14 +6,13 @@
 				var ctrl = this;
 					
 			};
-		
 		return {
 			restrict: 'AE',
 			templateUrl: 'app/shared/header.html',
 			scope: {},
 			bindToController: true,
 			controller: Controller,
-			controllerAs: 'headerCtrl'
+			controllerAs: 'ctrl'
 		};
 	}
 	/* define directive */

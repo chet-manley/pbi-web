@@ -32,38 +32,47 @@
 	<meta name="msapplication-config" content="http://pbiministries.org/assets/img/icons/browserconfig.xml?v=KmmKNJ4BNb">
 	<meta name="theme-color" content="#FFFFFF">
 	<!-- /favicons -->
-	<!-- styles -->
+	<!-- fonts -->
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Michroma|Roboto|Lobster+Two" />
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
-	<link rel="stylesheet" type="text/css" href="assets/css/angular-material.min.css" />
+	<!-- styles -->
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="assets/css/default.css" />
 	<link rel="stylesheet" type="text/css" media="print" href="assets/css/print.css" />
-	<!-- /styles -->
+</head>
+<body ng-app="pbiWeb" layout="column" layout-fill>
+	<menu>
+		<pbi-navigation></pbi-navigation>
+		<pbi-floating-verse layout="column"></pbi-floating-verse>
+	</menu>
+	<div layout="row" layout-align="center stretch" layout-fill>
+		<span flex></span>
+		<span flex="50"
+			  flex-md="60"
+			  flex-gt-md="45"
+			  layout="column"
+			  layout-align="space-between center">
+			<pbi-header></pbi-header>
+			<main ng-view></main>
+			<pbi-footer></pbi-footer>
+		</span>
+		<span flex></span>
+	</div>
 	<!-- libraries -->
-	<script src="assets/libs/angular.min.js"></script>
-	<script src="assets/libs/angular-aria.min.js"></script>
-	<script src="assets/libs/angular-route.min.js"></script>
-	<script src="assets/libs/angular-animate.min.js"></script>
-	<script src="assets/libs/angular-material.min.js"></script>
-	<!-- /libraries -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-aria.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.js"></script>
 	<!-- app -->
 	<script src="app/app.js"></script>
 	<script src="app/config.js"></script>
+	<!-- directives -->
 	<script src="app/shared/navigation.js"></script>
 	<script src="app/shared/header.js"></script>
-	<script src="app/shared/floatingVerse.js"></script>
 	<script src="app/shared/footer.js"></script>
+	<script src="app/shared/floatingVerse.js"></script>
+	<!-- components -->
 	<script src="app/components/home/home.js"></script>
-	<!-- /app -->
-</head>
-<body ng-app="pbiWeb">
-	<pbi-navigation></pbi-navigation>
-	<pbi-header></pbi-header>
-	<main ng-view></main>
-	<pbi-floating-verse></pbi-floating-verse>
-	<pbi-footer></pbi-footer>
-	
-	<img class="background-img" src="pics/backgrounds/blue-rays-bg.jpg" />
 	<script src="app/components/about/aboutUs.js"></script>
 	<script src="app/components/newsletters/newsletters.js"></script>
 	<script src="app/components/calendar/calendar.js"></script>
